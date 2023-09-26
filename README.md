@@ -1,2 +1,2 @@
 # dca.moe
-Welcome to the website repository of DGUT Computer Society, this website is now under construction... 
+Welcome to the homepage repository of **Computing Association, DGUT**.
