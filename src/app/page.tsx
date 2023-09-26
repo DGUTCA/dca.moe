@@ -4,25 +4,17 @@ import Image from "next/image"
 export default function Home() {
   return (
     <>
+        <div className="md:container px-6 prose">
+            <h1># 线上服务</h1>
+            
+            <div className="test grid gap-4 grid-cols-4"></div>
+            
+            <h1># 最近文章</h1>
+
+
+            
+        </div>   
     </>
   )
 }
 
-export function Service(href: string = "#", title: string, description: string, icon: string) {
-  return (
-    <div className="btn-square">
-      <Link href={href}>
-        <Image src={icon} alt="Logo" width={72} height={72} ></Image>
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </Link>
-    </div>
-  )
-}
-
-export function ServiceCard(img: string, title: string, description: string, href: string = "#") {
-  return (
-    <>
-    </>
-  )
-}

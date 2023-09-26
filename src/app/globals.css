@@ -6,6 +6,21 @@
     box-sizing: border-box;
 }
 
+
+a:hover {
+    color: grey;
+}
+
+/* h1 {
+    @apply text-4xl font-medium;
+}
+ */
+
 main {
     padding-top: 5rem;
 }
+
+.footer-icon > div {
+    @apply gap-2 flex;
+}
+
