@@ -21,3 +21,4 @@ const Service: React.FC<ServiceInterface> = (props) => {
 }
 
 export default Service
+export type {ServiceInterface}
