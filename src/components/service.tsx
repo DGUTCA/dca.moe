@@ -9,13 +9,10 @@ interface ServiceInterface {
 
 const Service: React.FC<ServiceInterface> = (props) => {
     return (
-        <div className={`${props.className} rounded-3xl border-black py-4 px-12 w-80 service shadow-lg`}>
-            <div className="pl-[62px]">
-                <Image width={100} height={100}  src={props.img_path} alt="" />
-            </div>
-            <h3 className="text-center">{props.title}</h3>
-                <h5>{props.desc}</h5>
-
+        <div className={`${props.className} grid rounded-3xl border-black p-5 service shadow-lg place-items-center`}>
+            <Image className="not-prose" width={100} height={100}  src={props.img_path} alt=""/>
+            <h3>{props.title}</h3>
+            <h5>{props.desc}</h5>
         </div>
     )
 }
