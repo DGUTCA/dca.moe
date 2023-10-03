@@ -15,6 +15,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh-hans">
+      <head>
+        <link
+          rel="icon"
+          href="icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+      </head>
       <body className="relative">
         <header>
           <Nav />
