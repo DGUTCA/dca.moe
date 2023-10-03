@@ -29,7 +29,7 @@ export default function Nav() {
                         {navs.map((data, idx) => {
                             return (
                                 <div key={idx}>
-                                    <Link href={data.path} className={navClass(data.path)+" tab-bordered"}>{data.name}</Link>
+                                    <Link href={data.path} className={navClass(data.path) + " tab-bordered"}>{data.name}</Link>
                                 </div>)
                         })}
                     </div>
@@ -40,10 +40,8 @@ export default function Nav() {
                         <ul tabIndex={0} className="dropdown-content z-[1] tabs tabs-boxed shadow bg-base-100 rounded-box">
                             {navs.map((data, idx) => {
                                 return (
-                                    <li>
-                                        <div key={idx}>
-                                            <Link href={data.path} className={navClass(data.path)}>{data.name}</Link>
-                                        </div>
+                                    <li key={idx}>
+                                        <Link href={data.path} className={navClass(data.path)}>{data.name}</Link>
                                     </li>)
                             })}
                         </ul>
