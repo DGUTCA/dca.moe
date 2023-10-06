@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Service from "@/components/service"
 import Abstarcts from "@/components/abstracts"
-import { StrStatus } from "@/components/abstracts"
+import { StrStatus, AbstarctType } from "@/components/abstracts"
 
 export default function Home() {
     return (
@@ -19,17 +19,30 @@ export default function Home() {
             <div className="grid grid-flow-row md:grid-cols-2">
                 <div className="grid"> 
                     <h2># 最近文章</h2>
-
-                    <Abstarcts status={StrStatus.FINISHED} img_path="/icons/document.svg" title="莞工计算机协会官网建设中">
-                        字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义
-                        字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义
-                        字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义字体方案要自定义
+                    <Abstarcts 
+                        comp_type={AbstarctType.Article} 
+                        status={StrStatus.INPROGRESS} 
+                        title="莞工计算机协会官网建设中" 
+                        img_path="/icons/document.svg"
+                        author="Nakono"
+                    >
+                        网站正在建设中...耐心等待，奇迹就一定会出现哟！啾咪啾咪！
                     </Abstarcts>
-
                 </div>
+                
                 <div className="grid">
                     <h2># 最新活动</h2>
-
+                    <Abstarcts 
+                        comp_type={AbstarctType.Activity} 
+                        status={StrStatus.NOT_STARTED} 
+                        title="明日方舟今晚更新" 
+                        location="真草运动场" 
+                        img_path=""
+                    >
+                        【烁尘烟中】
+                        赫德雷
+                        “令人怀念的地方，博士。这份委托的细节我并不在意，只是关于报酬，除了赏金之外，我还有些更好的想法。”
+                    </Abstarcts>
                 </div>
             </div>
         </div>   
