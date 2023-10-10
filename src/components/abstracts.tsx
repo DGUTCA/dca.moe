@@ -1,4 +1,3 @@
-import { EnumType } from "typescript";
 import { ServiceInterface } from "./service";
 import Image from "next/image";
 
@@ -27,7 +26,7 @@ function status2css(status: StrStatus): string {
 interface AbstractInterface extends ServiceInterface {
     author?: string;
     location?: string;
-    date?: Date
+    date: string;
     status: StrStatus
     comp_type: AbstarctType
     children?: React.ReactNode
@@ -42,7 +41,7 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
             <div>
                 <h4 className="inline">
                     {props.comp_type === AbstarctType.Article && `${props.author}, `}
-                    2023-5-6 
+                    {`${props.date}`}
                     {props.comp_type === AbstarctType.Activity && `, ${props.location}`}
                 </h4>
                 <div className={`badge mx-2 ${status2css(props.status)}`}>
@@ -60,4 +59,5 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
 
 
 export default Abstarcts;
+export type { AbstractInterface };
 export { StrStatus, AbstarctType };
