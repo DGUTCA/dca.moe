@@ -21,34 +21,39 @@ export default function Home() {
                 <div className="grid">
                     <h2># 最近文章</h2>
                     {
-                        allArticles.map(({ id, content, title, date, author }) => (
-                            <Abstarcts
-                                comp_type={AbstarctType.Article}
-                                status={StrStatus.INPROGRESS}
-                                title={title}
-                                date={date}
-                                img_path="/icons/document.svg"
-                                author={author}
-                            >
-                                {content}
-                            </Abstarcts>
+                        allArticles.map(({ id, content, title, date, author }, idx) => (
+                            <div key={idx}>
+                                <Abstarcts
+                                    comp_type={AbstarctType.Article}
+                                    status={StrStatus.INPROGRESS}
+                                    title={title}
+                                    date={date}
+                                    img_path="/icons/document.svg"
+                                    author={author}
+                                >
+                                    {content}
+                                </Abstarcts>
+                            </div>
                         ))
                     }
                 </div>
                 <div className="grid">
                     <h2># 最新活动</h2>
                     {
-                        allEvents.map(({ id, content, title, date, location }) => (
-                            <Abstarcts
-                                comp_type={AbstarctType.Activity}
-                                status={StrStatus.NOT_STARTED}
-                                title={title}
-                                date={date}
-                                location={location}
-                                img_path=""
-                            >
-                                {content}
-                            </Abstarcts>
+                        allEvents.map(({ id, content, title, date, location }, idx) => (
+                            <div key={idx}>
+                                <Abstarcts
+                                    comp_type={AbstarctType.Activity}
+                                    status={StrStatus.NOT_STARTED}
+                                    title={title}
+                                    date={date}
+                                    location={location}
+                                    img_path=""
+                                    key={idx}
+                                >
+                                    {content}
+                                </Abstarcts>
+                            </div>
                         ))
                     }
                 </div>
