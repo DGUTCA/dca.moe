@@ -18,7 +18,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="grid grid-flow-row md:grid-cols-2">
-                <div className="grid">
+                <div>
                     <h2># 最近文章</h2>
                     {
                         allArticles.map(({ id, content, title, date, author }, idx) => (
@@ -37,7 +37,7 @@ export default function Home() {
                         ))
                     }
                 </div>
-                <div className="grid">
+                <div>
                     <h2># 最新活动</h2>
                     {
                         allEvents.map(({ id, content, title, date, location }, idx) => (
