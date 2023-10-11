@@ -2,7 +2,7 @@ import { ServiceInterface } from "./service";
 import Image from "next/image";
 
 enum StrStatus {
-    NOT_STARTED = "Not Started",
+    NOT_STARTED = "Upcoming",
     INPROGRESS = "In Progress",
     FINISHED = "Finished"
 }
@@ -35,22 +35,27 @@ interface AbstractInterface extends ServiceInterface {
 const Abstarcts: React.FC<AbstractInterface> = (props) => {
     return (
         <div>
-            {props.comp_type === AbstarctType.Article 
-                &&(<Image src={props.img_path} width={30} height={30} alt="" className="inline m-0 pb-2" />)}
-            <h3 className="inline">{props.title}</h3>
             <div>
-                <h4 className="inline">
+                <span className="align-top"> 
+                {props.comp_type === AbstarctType.Article 
+                    &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0" />)}
+                </span>
+                <span className="h3-blk align-top">{props.title}</span>
+            </div>
+
+            <div className="-mt-1">
+                <span className="h5-gray">
                     {props.comp_type === AbstarctType.Article && `${props.author}, `}
                     {`${props.date}`}
                     {props.comp_type === AbstarctType.Activity && `, ${props.location}`}
-                </h4>
-                <div className={`badge mx-2 ${status2css(props.status)}`}>
+                </span>
+                <span className={`badge mx-2 ${status2css(props.status)}`}>
                     {props.status}
-                </div>
+                </span>
             </div>
-            <h6 className="pr-24">
+            <h5 className="pr-24 mt-2">
                 {props.children}
-            </h6>
+            </h5>
         </div>
     )
 }
