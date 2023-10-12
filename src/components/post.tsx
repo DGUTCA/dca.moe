@@ -3,7 +3,6 @@ import path from 'path';
 import matter from 'gray-matter';
 import {AbstractInterface} from './abstracts';
 
-
 export function getSortedPostsData( type:string, num?:number ) {
     const postsDirectory = path.join(process.cwd(), 'src/posts/'+type);
     // Get file names under /posts

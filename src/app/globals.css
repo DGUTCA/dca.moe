@@ -6,7 +6,6 @@
     box-sizing: border-box;
 }
 
-
 a:hover {
     color: grey;
 }
@@ -15,11 +14,9 @@ main {
     padding-top: 5rem;
 }
 
-
 h1 {
     @apply font-bold;
     font-size: 1.9rem;
-
 }
 
 h3 {
@@ -27,25 +24,20 @@ h3 {
     font-size: 1.2rem;
 }
 
-
-
 h5 {
-    /* @apply font-bold; */
     font-size: 0.9rem;
-    
 }
+
 
 .h3-blk {
     @apply font-bold;
     font-size: 1.2rem;
 }
 
-
 .h5-gray {
     @apply text-gray-400;
     font-size: 0.9rem;
 }
-
 
 .service:hover {
     @apply translate-y-[-15px] duration-100 opacity-60;

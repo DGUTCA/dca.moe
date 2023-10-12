@@ -61,8 +61,6 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
 }
 
 
-
-
 export default Abstarcts;
 export type { AbstractInterface };
 export { StrStatus, AbstarctType };

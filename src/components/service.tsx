@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 interface ServiceInterface {
   img_path: string;
   title: string;
@@ -9,10 +10,10 @@ interface ServiceInterface {
 
 const Service: React.FC<ServiceInterface> = (props) => {
   return (
-    <div className="service rounded-3xl border-black p-5 shadow-lg">
-      <div className={`${props.className} grid place-items-center`}>
+    <div className="service rounded-xl border-black px-8 py-12 shadow-lg">
+      <div className={`${props.className} place-items-center flex flex-col gap-4`}>
         <Image
-          className="not-prose"
+          className=""
           width={100}
           height={100}
           src={props.img_path}
