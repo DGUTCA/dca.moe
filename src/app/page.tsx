@@ -4,8 +4,8 @@ import { StrStatus, AbstarctType } from "@/components/abstracts"
 import { getSortedPostsData } from "@/components/post"
 
 export default function Home() {
-    const allEvents = getSortedPostsData('events');
-    const allArticles = getSortedPostsData('articles');
+    const allEvents = getSortedPostsData('events',5);
+    const allArticles = getSortedPostsData('articles',5);
     return (
         <div className="md:container px-6">
             <h1># 线上服务</h1>

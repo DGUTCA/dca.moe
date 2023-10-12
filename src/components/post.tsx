@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 import {AbstractInterface} from './abstracts';
 
 
-export function getSortedPostsData( type:string ) {
+export function getSortedPostsData( type:string, num?:number ) {
     const postsDirectory = path.join(process.cwd(), 'src/posts/'+type);
     // Get file names under /posts
     const fileNames = fs.readdirSync(postsDirectory);
@@ -30,11 +30,17 @@ export function getSortedPostsData( type:string ) {
         };
     });
     // Sort posts by date
-    return allPostsData.sort((a, b) => {
+    allPostsData.sort((a, b) => {
         if (a.date < b.date) {
             return 1;
         } else {
             return -1;
         }
     });
+    if (num) {
+        return allPostsData.slice(0, num);
+    }
+    else {
+        return allPostsData;
+    }
 }
