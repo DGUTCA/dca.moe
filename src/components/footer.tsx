@@ -12,7 +12,7 @@ export default function Footer() {
     
     return (
         <footer className=" bg-base-300 text-base-content">
-            <div className="md:container footer p-10 gap-20 md:grid-cols-3">
+            <div className="container footer p-8 gap-6 grid-cols-1 md:grid-cols-3 md:gap-16 lg:gap-20 lg:p-10 ">
 
                 <nav>
                     <header className="footer-title">ABOUT US</header>
@@ -23,7 +23,7 @@ export default function Footer() {
 
                 <nav>
                     <header className="footer-title">CONTACT US</header>
-                    <div className="p-1">
+                    <div className="px-1">
                         <div className="footer-icon flex flex-col gap-2">
                             {contact_info.map((data, idx) => {return (
                                 <div key={idx}>

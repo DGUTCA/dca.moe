@@ -7,7 +7,7 @@ export default function Home() {
     const allEvents = getSortedPostsData('events',5);
     const allArticles = getSortedPostsData('articles',5);
     return (
-        <div className="md:container px-6 mt-6">
+        <div className="md:container px-6 mt-2">
             <h1># 线上服务</h1>
             <div>
                 <div className="grid grid-flow-row grid-cols-2 gap-5 md:grid-cols-4">
