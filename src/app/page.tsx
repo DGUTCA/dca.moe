@@ -18,7 +18,7 @@ export default function Home() {
                 </div>
             </div>
             
-            <div className="my-16 md:grid grid-rows-2 gap-14 lg:grid lg:grid-cols-2 lg:grid-rows-none lg:gap-8">
+            <div className="my-16 grid grid-rows-2 gap-14 lg:grid lg:grid-cols-2 lg:grid-rows-none lg:gap-8">
                 <div>
                     <h1># 最近文章</h1>
                     <div className="flex flex-col gap-8 mt-1"> {
