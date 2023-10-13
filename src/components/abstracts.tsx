@@ -53,7 +53,7 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
                     {props.status}
                 </span>
             </div>
-            <h5 className="pr-24 mt-2 line-clamp-5">
+            <h5 className=" mt-2 line-clamp-5 md:pr-4 lg:pr-24">
                 {props.children}
             </h5>
         </div>

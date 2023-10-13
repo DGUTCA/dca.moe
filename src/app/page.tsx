@@ -7,7 +7,7 @@ export default function Home() {
     const allEvents = getSortedPostsData('events',5);
     const allArticles = getSortedPostsData('articles',5);
     return (
-        <div className="md:container px-6 mt-8 bg-bg">
+        <div className="md:container px-6 mt-8">
             <h1># 线上服务</h1>
             <div>
                 <div className="grid grid-flow-row grid-cols-2 md:grid-cols-4 gap-5">
@@ -17,7 +17,7 @@ export default function Home() {
                     <Service img_path="/icons/issue.svg" title="问题反馈" desc="如果您有任何问题请及时向我们反馈喵"></Service>
                 </div>
             </div>
-            <div className="grid grid-cols-2 my-16 gap-8">
+            <div className="grid grid-cols-2 my-16 gap-8 md:gap-0">
                 <div>
                     <h1># 最近文章</h1>
                     <div className="flex flex-col gap-8 mt-1"> {
