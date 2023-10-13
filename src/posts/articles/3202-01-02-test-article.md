@@ -2,6 +2,7 @@
 title: '服务开发中'
 date: '3202-01-01'
 author: 'イヌさん'
+status: 'In Progress'
 categories:
   - event
 ---

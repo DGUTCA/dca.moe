@@ -37,23 +37,23 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
         <div>
             <div>
                 <span className="align-top"> 
-                {props.comp_type === AbstarctType.Article 
-                    &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0" />)}
+                    {props.comp_type === AbstarctType.Article 
+                        &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0" />)}
                 </span>
                 <span className="h3-blk align-top">{props.title}</span>
             </div>
 
-            <div className="-mt-1">
-                <span className="h5-gray">
+            <div className="-mt-[2px]">
+                <span className="h5-gray align-bottom">
                     {props.comp_type === AbstarctType.Article && `${props.author}, `}
                     {`${props.date}`}
                     {props.comp_type === AbstarctType.Activity && `, ${props.location}`}
                 </span>
-                <span className={`badge mx-2 ${status2css(props.status)}`}>
+                <span className={`badge mx-2 ${status2css(props.status)} align-bottom`}>
                     {props.status}
                 </span>
             </div>
-            <h5 className=" mt-2 line-clamp-5 md:pr-4 lg:pr-24">
+            <h5 className="mt-2 line-clamp-5 md:pr-4 lg:pr-10 2xl:pr-24">
                 {props.children}
             </h5>
         </div>
