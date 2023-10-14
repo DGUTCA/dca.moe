@@ -50,6 +50,6 @@ h5 {
 }
 
 /* for dark mode */
-.dark-adapter {
+.dark-adaptor {
     @apply dark:invert dark:opacity-70;
 }

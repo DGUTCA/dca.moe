@@ -38,7 +38,7 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
             <div>
                 <span className="align-top"> 
                     {props.comp_type === AbstarctType.Article 
-                        &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0" />)}
+                        &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0 dark-adaptor" />)}
                 </span>
                 <span className="h3-blk align-top">{props.title}</span>
             </div>
