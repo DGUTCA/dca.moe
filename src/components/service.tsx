@@ -13,7 +13,7 @@ const Service: React.FC<ServiceInterface> = (props) => {
     <div className="service rounded-xl border-black px-6 py-4 lg:px-8 lg:py-12 shadow-lg">
       <div className={`${props.className} place-items-center flex flex-col gap-2 lg:gap-3`}>
         <Image
-          className=""
+          className="dark-adapter"
           width={100}
           height={100}
           sizes="(max-width: 768px) 50vw,

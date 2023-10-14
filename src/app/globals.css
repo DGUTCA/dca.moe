@@ -49,3 +49,7 @@ h5 {
     @apply gap-2 flex;
 }
 
+/* for dark mode */
+.dark-adapter {
+    @apply dark:invert dark:opacity-70;
+}

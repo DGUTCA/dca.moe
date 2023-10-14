@@ -27,8 +27,8 @@ export default function Footer() {
                         <div className="footer-icon flex flex-col gap-2">
                             {contact_info.map((data, idx) => {return (
                                 <div key={idx}>
-                                    <Image src={`/icons/${data.name.toLowerCase()}.svg`} alt="Logo" width={18} height={18} ></Image>
-                                    <a href={data.link}>{data.name}</a>
+                                    <Image className="dark-adapter" src={`/icons/${data.name.toLowerCase()}.svg`} alt="Logo" width={18} height={18} />
+                                    <a className="dark:text-gray-400" href={data.link}>{data.name}</a>
                                 </div>)
                             })}
                         </div>
