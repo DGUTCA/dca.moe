@@ -50,10 +50,10 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
                     {props.comp_type === AbstarctType.Activity && `, ${props.location}`}
                 </span>
                 <span className={`badge mx-2 ${status2css(props.status)} align-bottom`}>
-                    {props.status}
+                    {props.comp_type === AbstarctType.Activity && `${props.status}`}
                 </span>
             </div>
-            <h5 className="mt-2 line-clamp-5 md:pr-4 lg:pr-10 2xl:pr-24">
+            <h5 className="mt-2 md:pr-4 lg:pr-10 2xl:pr-24">
                 {props.children}
             </h5>
         </div>
