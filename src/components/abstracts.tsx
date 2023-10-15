@@ -50,14 +50,14 @@ interface AbstractInterface extends ServiceInterface {
 }
 
 const Abstarcts: React.FC<AbstractInterface> = (props) => {
-    const isArticle: Boolean = props.comp_type === AbstarctType.Passage
+    const isPassage: Boolean = props.comp_type === AbstarctType.Passage
     const stat: StrStatus = check_date_status(props.date, props.time? props.time: "")
 
     return (
         <div>
             <div>
                 <span className="align-top"> 
-                    {isArticle
+                    {isPassage
                         &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0 dark-adaptor" />)}
                 </span>
                 <span className="h3-blk align-top">{props.title}</span>
@@ -65,13 +65,13 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
 
             <div className="-mt-[2px]">
                 <span className="h5-gray align-bottom">
-                    <span>{isArticle && `${props.author},  `}</span>
+                    <span>{isPassage && `${props.author},  `}</span>
                     <span>{props.date}</span>
-                    <span className="font-extrabold">{!isArticle && `  ${props.time}`}</span>
-                    <span>{!isArticle && `  ${props.location}`}</span>
+                    <span className="font-extrabold">{!isPassage && `  ${props.time}`}</span>
+                    <span>{!isPassage && `  ${props.location}`}</span>
                 </span>
-                <span className={`badge mx-2 align-bottom ` + (isArticle ? "" : status2css(stat))}>
-                    {!isArticle && `${stat}`}
+                <span className={`mx-2 align-bottom ` + (isPassage ? "" : `badge ${status2css(stat)}`)}>
+                    {!isPassage && `${stat}`}
                 </span>
             </div>
             <h5 className="mt-2 md:pr-4 lg:pr-10 2xl:pr-24">
