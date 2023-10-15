@@ -1,11 +1,15 @@
 import Service from "@/components/service"
 import Abstarcts from "@/components/abstracts"
-import { StrStatus, AbstarctType } from "@/components/abstracts"
+import { AbstarctType } from "@/components/abstracts"
 import { getSortedPostsData } from "@/components/post"
+import { useEffect } from "react";
 
 export default function Home() {
     const allEvents = getSortedPostsData('events',5);
     const allArticles = getSortedPostsData('articles',5);
+
+
+
     return (
         <div className="md:container px-6 mt-2">
             <h1># 线上服务</h1>
@@ -22,11 +26,10 @@ export default function Home() {
                 <div>
                     <h1># 最近文章</h1>
                     <div className="flex flex-col gap-8 mt-1"> {
-                        allArticles.map(({ id, content, title, date, author, status }, idx) => (
+                        allArticles.map(({ id, content, title, date, author, time }, idx) => (
                             <div key={idx}>
                                 <Abstarcts
-                                    comp_type={AbstarctType.Article}
-                                    status={status}
+                                    comp_type={AbstarctType.Passage}
                                     title={title}
                                     date={date}
                                     img_path="/icons/document.svg"
@@ -42,12 +45,12 @@ export default function Home() {
                 <div>
                     <h1># 最新活动</h1>
                     <div className="flex flex-col gap-8 mt-1">
-                    {allEvents.map(({ id, content, title, date, location, status }, idx) => (
+                    {allEvents.map(({ id, content, title, date, location, time }, idx) => (
                         <div key={idx}>
                             <Abstarcts
-                                comp_type={AbstarctType.Activity}
-                                status={status}
+                                comp_type={AbstarctType.Event}
                                 title={title}
+                                time={time}
                                 date={date}
                                 location={location}
                                 img_path=""
