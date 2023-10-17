@@ -1,6 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getPostData, getFileNames } from "@/components/post";
 import { notFound } from "next/navigation";
+import remarkGfm from "remark-gfm";
 
 export async function generateStaticParams() {
   const posts = getFileNames("events");
@@ -12,6 +13,9 @@ export async function generateStaticParams() {
 export default function Page({ params }: { params: { slug: string } }) {
   try {
     const data = getPostData("events", params.slug);
+    const mdxOptions = {
+      remarkPlugins: [remarkGfm],
+    };
     return (
       <div className="md:container prose p-16">
         <div>
@@ -27,7 +31,7 @@ export default function Page({ params }: { params: { slug: string } }) {
           </span>
         </div>
         <h5 className="mt-2 md:pr-4 lg:pr-10 2xl:pr-24">{data.children}</h5>
-        <MDXRemote source={data.content} />
+        <MDXRemote source={data.content} options={{ mdxOptions }} />
       </div>
     );
   } catch (e) {
