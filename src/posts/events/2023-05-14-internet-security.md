@@ -4,7 +4,6 @@ date: '2023-05-14'
 time: '15:00-17:00'
 location: '莞博三室大活动室'
 author: 'Wenhao Lan'
-status: 'Finished'
 categories:
   - event
 ---
