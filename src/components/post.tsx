@@ -3,33 +3,14 @@ import path from "path";
 import matter from "gray-matter";
 import { AbstractInterface } from "./abstracts";
 
+const root = "src/posts/"
+
 export function getSortedPostsData(type: string, num?: number) {
-  const postsDirectory = path.join(process.cwd(), "src/posts/" + type);
-  // Get file names under /posts
+  const postsDirectory = path.join(process.cwd(), root + type);
+  // Get file names under postsDirectory
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames.map((fileName) => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, "");
-
-    // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-
-    // Use markdown gray-matter to parse the post metadata section
-    const matterResult = matter(fileContents);
-
-    // Get content
-    const content =
-      matterResult.content.length > 150
-        ? matterResult.content.slice(0, 150) + "..."
-        : matterResult.content;
-
-    // Combine the data with the id
-    return {
-      id,
-      content,
-      ...(matterResult.data as AbstractInterface),
-    };
+    return getPostData(type, fileName.replace(/\.md$/, ""));
   });
   // Sort posts by date
   allPostsData.sort((a, b) => {
@@ -44,4 +25,25 @@ export function getSortedPostsData(type: string, num?: number) {
   } else {
     return allPostsData;
   }
+}
+
+export function getPostData(type: string, id: string) {
+  const postsDirectory = path.join(process.cwd(), root + type);
+
+  // Read markdown file as string
+  const fullPath = path.join(postsDirectory, id + ".md");
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+
+  // Use markdown gray-matter to parse the post metadata section
+  const matterResult = matter(fileContents);
+
+  // Get content
+  const content = matterResult.content;
+
+  // Combine the data with the id
+  return {
+    id,
+    content,
+    ...(matterResult.data as AbstractInterface),
+  };
 }

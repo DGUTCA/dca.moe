@@ -3,10 +3,10 @@ import { getSortedPostsData } from "@/components/post";
 import Abstarcts from "@/components/abstracts";
 import { AbstarctType } from "@/components/abstracts";
 export default function Page() {
-  const allEvents = getSortedPostsData("events", 5);
+  const allArticles = getSortedPostsData("articles", 5);
   return (
     <div className="flex flex-col gap-8 porse md:container p-16 md:pr-64">
-      {allEvents.map(({ id, content, title, date, location, time }, idx) => (
+      {allArticles.map(({ id, content, title, date, location, time }, idx) => (
         <div key={idx}>
           <div key={idx}>
             <Abstarcts

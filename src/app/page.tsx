@@ -29,13 +29,14 @@ export default function Home() {
                         allArticles.map(({ id, content, title, date, author, time }, idx) => (
                             <div key={idx}>
                                 <Abstarcts
+                                    file_name={id}
                                     comp_type={AbstarctType.Passage}
                                     title={title}
                                     date={date}
                                     img_path="/icons/document.svg"
                                     author={author}
                                 >
-                                    {content}
+                                    {content.length>100?content.slice(0, 100) + '...':content}
                                 </Abstarcts>
                             </div>
                         ))
@@ -48,15 +49,15 @@ export default function Home() {
                     {allEvents.map(({ id, content, title, date, location, time }, idx) => (
                         <div key={idx}>
                             <Abstarcts
+                                file_name={id}
                                 comp_type={AbstarctType.Event}
                                 title={title}
                                 time={time}
                                 date={date}
                                 location={location}
                                 img_path=""
-                                key={idx}
                             >
-                                {content}
+                                {content.length>100?content.slice(0, 100) + '...':content}
                             </Abstarcts>
                         </div>))
                     }

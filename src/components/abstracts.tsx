@@ -1,4 +1,5 @@
 import { ServiceInterface } from "./service";
+import Link from "next/link";
 import Image from "next/image";
 
 enum StrStatus {
@@ -41,6 +42,7 @@ function status2css(status: StrStatus): string {
 }
 
 interface AbstractInterface extends ServiceInterface {
+    file_name: string;
     author?: string;
     location?: string;
     date: string;
@@ -60,7 +62,7 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
                     {isPassage
                         &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0 dark-adaptor" />)}
                 </span>
-                <span className="h3-blk align-top">{props.title}</span>
+                <span className="h3-blk align-top"><Link href={isPassage?"/articles/"+props.file_name:"/events/"+props.file_name}>{props.title}</Link></span>
             </div>
 
             <div className="-mt-[2px]">
