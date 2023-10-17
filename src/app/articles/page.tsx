@@ -11,7 +11,7 @@ export default function Page() {
           <div key={idx}>
             <Abstarcts
               file_name={id}
-              comp_type={AbstarctType.Event}
+              comp_type={AbstarctType.Passage}
               title={title}
               time={time}
               date={date}
