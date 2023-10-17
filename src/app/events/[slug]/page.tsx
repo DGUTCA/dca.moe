@@ -1,6 +1,13 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { getPostData } from "@/components/post";
+import { getPostData, getFileNames } from "@/components/post";
 import { notFound } from "next/navigation";
+
+export async function generateStaticParams() {
+  const posts = getFileNames("events");
+  return posts.map((post) => ({
+    slug: post,
+  }));
+}
 
 export default function Page({ params }: { params: { slug: string } }) {
   try {

@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/icon?<generated>"
+          href="icon?<generated>"
           type="image/<generated>"
           sizes="<generated>"
         />

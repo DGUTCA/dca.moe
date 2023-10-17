@@ -6,9 +6,8 @@ import { AbstractInterface } from "./abstracts";
 const root = "src/posts/"
 
 export function getSortedPostsData(type: string, num?: number) {
-  const postsDirectory = path.join(process.cwd(), root + type);
   // Get file names under postsDirectory
-  const fileNames = fs.readdirSync(postsDirectory);
+  const fileNames = getFileNames(type);
   const allPostsData = fileNames.map((fileName) => {
     return getPostData(type, fileName.replace(/\.md$/, ""));
   });
@@ -25,6 +24,15 @@ export function getSortedPostsData(type: string, num?: number) {
   } else {
     return allPostsData;
   }
+}
+
+export function getFileNames(type: string) {
+  const postsDirectory = path.join(process.cwd(), root + type);
+  // Get file names under postsDirectory
+  const fileNames = fs.readdirSync(postsDirectory);
+  return fileNames.map((fileName) => {
+    return fileName.replace(/\.md$/, "");
+  });
 }
 
 export function getPostData(type: string, id: string) {
