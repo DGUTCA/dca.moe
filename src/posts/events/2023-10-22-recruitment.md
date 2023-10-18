@@ -12,6 +12,8 @@ categories:
 
 此次摆摊依然在田径场，由于这此次通知摆摊的时间比较仓促，可能没有太多展示，大概率没雨，也请大家多多留意天气喵。
 
+也欢迎加入我们:[学生社团招新报名表](https://docs.qq.com/form/page/DQ0RmVU1wQlBoYVNv)
+
 具体位置：
 ![没办法，就是这么糊](</img/2023_ recruitment.jpg>)
 

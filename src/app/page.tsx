@@ -61,6 +61,13 @@ export default function Home() {
                     }
                     </div>
                 </div>
+                
+                <div>
+                    <h1># 加入我们</h1>
+                    <div className="flex flex-col gap-8 mt-1">
+                        <h4>请在学生社团招新期间填写：<a className="text-blue-500" href="https://docs.qq.com/form/page/DQ0RmVU1wQlBoYVNv">学生社团招新报名表</a></h4>
+                    </div>
+                </div>
             </div>
         </div>
     )
