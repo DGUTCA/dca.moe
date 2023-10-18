@@ -16,7 +16,13 @@ const config: Config = {
                 'gradient-conic':
                 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
-        }
+            // screens: { 
+            //     'se': '375px',
+            //     'laptop': '1024px',
+            //     'desktop': '1280px',
+            // },
+        },
+        
     },
     daisyui: {
         themes: [
@@ -27,13 +33,15 @@ const config: Config = {
                      * customize existing theme here, example:
                      * "primary": "#ffffff",
                      */
-                    "info": "#22d3ee"
+                    "info": "#22d3ee",
+                    "primary": "#1F2937"
                 }
             },
             {
                 dark: {
                     ...require("daisyui/src/theming/themes")["[data-theme=dark]"],
-                    "info": "#22d3ee"
+                    "info": "#22d3ee",
+                    "primary":"#A6ADBA"
                 }
             },
         ],

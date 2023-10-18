@@ -20,7 +20,7 @@ const Service: React.FC<ServiceInterface> = (props) => {
           alt=""
         />
         <h3>{props.title}</h3>
-        <div className="h5-gray lg:px-0 xl:px-6 text-center">{props.desc}</div>
+        <div className="h5-gray lg:px-0 xl:px-6 text-center h-16 lg:h-10 ">{props.desc}</div>
       </div>
     </div>
   );
