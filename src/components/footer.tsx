@@ -6,8 +6,6 @@ import Image from "next/image";
 export default function Footer() {
     const contact_info = [
         {name:"Github", link:"https://github.com/DGUTCA"},
-        {name:"Mail", link:"https://github.com/"},
-        {name:"Phone", link:"https://github.com"}
     ]
     
     return (

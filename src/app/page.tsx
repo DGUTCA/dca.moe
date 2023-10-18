@@ -7,18 +7,32 @@ import { useEffect } from "react";
 export default function Home() {
     const allEvents = getSortedPostsData('events',5);
     const allArticles = getSortedPostsData('articles',5);
-
-
-
+    const services = [
+        {
+            img_path: "/icons/fix.svg",
+            title: "报修平台",
+            desc: "为广大师生同学提供设备维修服务喵（在建中）",
+            href: "#"
+        },
+        {
+            img_path: "/icons/issue.svg",
+            title: "问题反馈",
+            desc: "如果您有任何问题请及时向我们反馈喵",
+            href: "https://github.com/DGUTCA/issues/issues/new/choose"
+        }
+    ]
     return (
         <div className="md:container px-6 mt-2">
             <h1># 线上服务</h1>
             <div>
                 <div className="grid grid-flow-row grid-cols-2 gap-5 md:grid-cols-4">
-                    <Service img_path="/icons/fix.svg" title="报修平台" desc="为广大师生同学提供设备维修服务喵"></Service>
-                    <Service img_path="/icons/calendar.svg" title="活动日历" desc="丰富的活动在这里等你喵"></Service>
-                    <Service img_path="/icons/mc.svg" title="Minecraft" desc="一起来玩Mincraft喵"></Service>
-                    <Service img_path="/icons/issue.svg" title="问题反馈" desc="如果您有任何问题请及时向我们反馈喵"></Service>
+                    {
+                        services.map((service, idx) => (
+                            <a href={service.href} key={idx}>
+                                <Service img_path={service.img_path} title={service.title} desc={service.desc}></Service>
+                            </a>
+                        ))
+                    }
                 </div>
             </div>
             
