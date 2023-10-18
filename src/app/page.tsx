@@ -33,7 +33,6 @@ export default function Home() {
                                     comp_type={AbstarctType.Passage}
                                     title={title}
                                     date={date}
-                                    img_path="/icons/document.svg"
                                     author={author}
                                 >
                                     {content.length>100?content.slice(0, 100) + '...':content}
@@ -55,7 +54,6 @@ export default function Home() {
                                 time={time}
                                 date={date}
                                 location={location}
-                                img_path=""
                             >
                                 {content.length>100?content.slice(0, 100) + '...':content}
                             </Abstarcts>

@@ -41,7 +41,10 @@ function status2css(status: StrStatus): string {
     return ""
 }
 
-interface AbstractInterface extends ServiceInterface {
+interface AbstractInterface {
+    title: string;
+    desc?: string;
+    className?: string;
     file_name: string;
     author?: string;
     location?: string;
@@ -60,7 +63,7 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
             <div>
                 <span className="align-top"> 
                     {isPassage
-                        &&(<Image src={props.img_path} width={25} height={25} alt="" className="inline m-0 dark-adaptor" />)}
+                        &&(<Image src={"/icons/document.svg"} width={25} height={25} alt="" className="inline m-0 dark-adaptor" />)}
                 </span>
                 <span className="h3-blk align-top"><Link href={isPassage?"/articles/"+props.file_name:"/events/"+props.file_name}>{props.title}</Link></span>
             </div>

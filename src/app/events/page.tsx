@@ -16,7 +16,6 @@ export default function Page() {
               time={time}
               date={date}
               location={location}
-              img_path=""
             >
               <MDXRemote source={content} />
             </Abstarcts>
