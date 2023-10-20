@@ -1,7 +1,4 @@
-import { data } from "autoprefixer";
 import Image from "next/image";
-
-
 
 export default function Footer() {
     const contact_info = [

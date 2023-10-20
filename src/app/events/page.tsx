@@ -1,7 +1,7 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { getSortedPostsData } from "@/components/post";
 import Abstarcts from "@/components/abstracts";
-import { AbstarctType } from "@/components/abstracts";
+import { AbstarctType } from "@/components/interface";
 export default function Page() {
   const allEvents = getSortedPostsData("events", 5);
   return (

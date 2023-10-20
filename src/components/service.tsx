@@ -1,12 +1,5 @@
 import Image from "next/image";
-
-
-interface ServiceInterface {
-  img_path: string;
-  title: string;
-  desc?: string;
-  className?: string;
-}
+import { ServiceInterface } from "./interface";
 
 const Service: React.FC<ServiceInterface> = (props) => {
   return (

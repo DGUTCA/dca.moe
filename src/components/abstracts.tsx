@@ -1,58 +1,8 @@
-import { ServiceInterface } from "./service";
+"use client"
 import Link from "next/link";
 import Image from "next/image";
-
-enum StrStatus {
-    UPCOMING = "Upcoming",
-    INPROGRESS = "In Progress",
-    FINISHED = "Finished",
-    PENDING = ""
-}
-
-enum AbstarctType {
-    Passage,
-    Event
-}
-
-function check_date_status(date: string, time: string): StrStatus {
-    const now = new Date(new Date().toLocaleString()).getTime()      // @issue: how to get local time simply???????
-    const str_spilt: Array<string> = time.split("-") 
-    const d_start = new Date(`${date} ${str_spilt[0]}:00`).getTime()
-    const d_end = new Date(`${date} ${str_spilt[1]}:00`).getTime()
-    
-    // there is no such event that lasts more than a day    
-    if(now < d_start) {   
-        return StrStatus.UPCOMING;
-    } else if((now >= d_start) && (now <= d_end)) {                   
-        return StrStatus.INPROGRESS;
-    } else {                                                    
-        return StrStatus.FINISHED;                              
-    }
-}
-
-function status2css(status: StrStatus): string {
-    if (status === StrStatus.UPCOMING) {
-        return "badge-warning";
-    } else if (status === StrStatus.INPROGRESS) {
-        return "badge-info";
-    } else if (status === StrStatus.FINISHED) {
-        return "badge-success";
-    }
-    return ""
-}
-
-interface AbstractInterface {
-    title: string;
-    desc?: string;
-    className?: string;
-    file_name: string;
-    author?: string;
-    location?: string;
-    date: string;
-    time?: string;
-    comp_type: AbstarctType
-    children?: React.ReactNode
-}
+import { check_date_status } from "./client_component";
+import { AbstractInterface, StrStatus, AbstarctType, status2css } from "./interface";
 
 const Abstarcts: React.FC<AbstractInterface> = (props) => {
     const isPassage: Boolean = props.comp_type === AbstarctType.Passage
@@ -86,7 +36,4 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
     )
 }
 
-
 export default Abstarcts;
-export type { AbstractInterface };
-export { StrStatus, AbstarctType };

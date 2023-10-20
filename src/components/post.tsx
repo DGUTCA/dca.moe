@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { AbstractInterface } from "./abstracts";
+import { AbstractInterface } from "./interface";
 
 const root = "src/posts/"
 

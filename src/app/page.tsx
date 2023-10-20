@@ -1,6 +1,6 @@
 import Service from "@/components/service"
 import Abstarcts from "@/components/abstracts"
-import { AbstarctType } from "@/components/abstracts"
+import { AbstarctType } from "@/components/interface"
 import { getSortedPostsData } from "@/components/post"
 
 

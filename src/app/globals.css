@@ -53,3 +53,8 @@ h5 {
 .dark-adaptor {
     @apply dark:invert dark:opacity-70;
 }
+
+/* hover animation effects */
+.anime-ud-line {
+    
+}
