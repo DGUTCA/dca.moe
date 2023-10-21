@@ -4,8 +4,12 @@ import Footer from "../components/footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "莞工计协",
-  description: "DGUT Compute Association",
+  title: "东莞理工学院 计算机协会",
+  authors: {
+    "url": "https://github.com/DGUTCA",
+    "name": "Computing Association, DGUT",
+  },
+  description: "The homepage of Computing Association, DGUT",
 };
 
 export default function RootLayout({
