@@ -8,7 +8,7 @@ export default function Nav() {
     const navs = [
         { name: "Home", path: "/" },
         { name: "Events", path: "/events" },
-        { name: "Articles", path: "/articles" },
+        { name: "Blog", path: "/blog" },
     ]
     function navClass(path: string) {
         if (path === "/") {

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import remarkGfm from "remark-gfm";
 
 export async function generateStaticParams() {
-  const posts = getFileNames("articles");
+  const posts = getFileNames("blog");
   return posts.map((post) => ({
     slug: post,
   }));
@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
 export default function Page({ params }: { params: { slug: string } }) {
   try {
-    const data = getPostData("articles", params.slug);
+    const data = getPostData("blog", params.slug);
     const mdxOptions = {
       remarkPlugins: [remarkGfm],
     };

@@ -7,15 +7,16 @@ import { AbstractInterface, StrStatus, AbstarctType, status2css } from "./interf
 const Abstarcts: React.FC<AbstractInterface> = (props) => {
     const isPassage: Boolean = props.comp_type === AbstarctType.Passage
     const stat: StrStatus = check_date_status(props.date, props.time? props.time: "")
-
+    const content = props.children ? props.children as string : ""
     return (
-        <div>
+        <div className="bg-box-fx">
+            <Link href={isPassage?"/blog/"+props.file_name:"/events/"+props.file_name} className="hover:text-gray-700">
             <div>
                 <span className="align-top"> 
                     {isPassage
                         &&(<Image src={"/icons/document.svg"} width={25} height={25} alt="" className="inline m-0 dark-adaptor" />)}
                 </span>
-                <span className="h3-blk align-top"><Link href={isPassage?"/articles/"+props.file_name:"/events/"+props.file_name}>{props.title}</Link></span>
+                <span className="h3-blk align-top">{props.title}</span>
             </div>
 
             <div className="-mt-[2px]">
@@ -30,8 +31,9 @@ const Abstarcts: React.FC<AbstractInterface> = (props) => {
                 </span>
             </div>
             <h5 className="mt-2 md:pr-4 lg:pr-10 2xl:pr-24">
-                {props.children}
+                {content.length>100?content.slice(0, 100) + '...':content}
             </h5>
+            </Link>
         </div>
     )
 }

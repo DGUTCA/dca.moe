@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* +------------------------ customized typography ----------------------+ */
 * {
     box-sizing: border-box;
 }
@@ -28,7 +28,6 @@ h5 {
     font-size: 0.9rem;
 }
 
-
 .h3-blk {
     @apply font-bold;
     font-size: 1.2rem;
@@ -39,22 +38,37 @@ h5 {
     font-size: 0.9rem;
 }
 
+/* +------------------------ animation ------------------------+ */
+/* transformation effects for <Service> */
 .service:hover {
     @apply translate-y-[-15px] duration-100 opacity-60;
     cursor: pointer;    
 }
 
-
-.footer-icon > div {
-    @apply gap-2 flex;
+/* bg box effects for <Abstracts> */
+.bg-box-fx {
+    position: relative;
 }
 
+.bg-box-fx::after {
+    @apply rounded-lg h-[113%] w-0;
+    position: absolute;
+    content: '';
+    top: -6%;
+    z-index: -1;
+    
+}
+
+.bg-box-fx::after:hover {
+    @apply bg-gray-200 dark:bg-base-200 cursor-pointer w-[112%] -left-5 lg:-left-3 lg:w-full 2xl:w-[89%] duration-300;
+}
+
+/* +------------------------ others ------------------------+ */
 /* for dark mode */
 .dark-adaptor {
     @apply dark:invert dark:opacity-70;
 }
 
-/* hover animation effects */
-.anime-ud-line {
-    
+.footer-icon > div {
+    @apply gap-2 flex;
 }

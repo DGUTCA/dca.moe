@@ -6,7 +6,7 @@ import { getSortedPostsData } from "@/components/post"
 
 export default function Home() {
     const allEvents = getSortedPostsData('events',5);
-    const allArticles = getSortedPostsData('articles',5);
+    const allArticles = getSortedPostsData('blog',5);
     const services = [
         {
             img_path: "/icons/fix.svg",
@@ -14,7 +14,6 @@ export default function Home() {
             desc: "为广大师生同学提供设备维修服务喵（在建中）",
             href: "#"
         },
-        
         {
             img_path: "/icons/git.svg",
             title: "Git",
@@ -52,7 +51,7 @@ export default function Home() {
             <div className="my-16 grid gap-16 lg:grid-cols-2 lg:grid-rows-none lg:gap-8">
                 <div>
                     <h1># 最近文章</h1>
-                    <div className="flex flex-col gap-8 mt-1"> {
+                    <div className="flex flex-col gap-8 mt-3"> {
                         allArticles.map(({ id, content, title, date, author, time }, idx) => (
                             <div key={idx}>
                                 <Abstarcts
@@ -71,7 +70,7 @@ export default function Home() {
 
                 <div>
                     <h1># 最新活动</h1>
-                    <div className="flex flex-col gap-8 mt-1">
+                    <div className="flex flex-col gap-8 mt-3">
                     {allEvents.map(({ id, content, title, date, location, time }, idx) => (
                         <div key={idx}>
                             <Abstarcts
@@ -82,7 +81,7 @@ export default function Home() {
                                 date={date}
                                 location={location}
                             >
-                                {content.length>100?content.slice(0, 100) + '...':content}
+                                {content}
                             </Abstarcts>
                         </div>))
                     }
@@ -92,7 +91,9 @@ export default function Home() {
                 <div>
                     <h1># 加入我们</h1>
                     <div className="flex flex-col gap-8 mt-1">
-                        <h4>请在学生社团招新期间填写：<a className="text-blue-500" href="https://docs.qq.com/form/page/DQ0RmVU1wQlBoYVNv">学生社团招新报名表</a></h4>
+                        <h4>请在学生社团招新期间填写：
+                            <a className="text-blue-500" href="https://docs.qq.com/form/page/DQ0RmVU1wQlBoYVNv">学生社团招新报名表</a>
+                        </h4>
                     </div>
                 </div>
             </div>
