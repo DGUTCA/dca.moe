@@ -35,9 +35,9 @@ export default function Home() {
     ]
     return (
         <div className="md:container px-6 mt-2">
-            <h1># 线上服务</h1>
+            <h1 className="lg:pl-10 xl:pl-[80px]"># 线上服务</h1>
             <div>
-                <div className="grid grid-flow-row grid-cols-2 gap-5 md:grid-cols-4">
+                <div className="grid grid-flow-row grid-cols-2 gap-4 mt-4 lg:mt-12 md:grid-cols-4 md:gap-0">
                     {
                         services.map((service, idx) => (
                             <a href={service.href} key={idx}>
@@ -48,7 +48,7 @@ export default function Home() {
                 </div>
             </div>
             
-            <div className="my-16 grid gap-16 lg:grid-cols-2 lg:grid-rows-none lg:gap-8">
+            <div className="my-16 grid gap-16 lg:pl-10 lg:grid-cols-2 lg:grid-rows-none lg:gap-28 xl:pl-[80px]">
                 <div>
                     <h1># 最近文章</h1>
                     <div className="flex flex-col gap-8 mt-3"> {

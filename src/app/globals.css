@@ -21,7 +21,7 @@ h1 {
 
 h3 {
     @apply font-bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 
 h5 {
@@ -40,18 +40,23 @@ h5 {
 
 /* +------------------------ animation ------------------------+ */
 /* transformation effects for <Service> */
+.service {
+    @apply duration-100;
+}
+
 .service:hover {
-    @apply translate-y-[-15px] duration-100 opacity-60;
+    @apply translate-y-[-15px] duration-100 opacity-60 bg-gray-200 rounded-xl;
     cursor: pointer;    
 }
 
 /* bg box effects for <Abstracts> */
 .bg-box-fx {
     position: relative;
+    
 }
 
 .bg-box-fx::after {
-    @apply rounded-lg h-[113%] w-0;
+    @apply rounded-lg h-[113%] w-0 duration-200 -left-5 lg:-left-3;
     position: absolute;
     content: '';
     top: -6%;
@@ -60,7 +65,7 @@ h5 {
 }
 
 .bg-box-fx::after:hover {
-    @apply bg-gray-200 dark:bg-base-200 cursor-pointer w-[112%] -left-5 lg:-left-3 lg:w-full 2xl:w-[89%] duration-300;
+    @apply bg-gray-200 dark:bg-base-200 cursor-pointer w-[112%]  lg:w-full 2xl:w-[89%] duration-300;
 }
 
 /* +------------------------ others ------------------------+ */
