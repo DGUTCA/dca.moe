@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { AbstractInterface } from "./interface";
 
-const root = "src/posts/"
+const root = "src/posts/";
 
 export function getSortedPostsData(type: string, num?: number) {
   // Get file names under postsDirectory

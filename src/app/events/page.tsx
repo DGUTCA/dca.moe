@@ -1,28 +1,42 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { getSortedPostsData } from "@/components/post";
-import Abstarcts from "@/components/abstracts";
-import { AbstarctType } from "@/components/interface";
+import { getSortedPostsData } from "@/lib/post";
+import Abstarcts from "@/ui/abstracts";
+import { AbstarctType } from "@/lib/interface";
+import remarkGfm from "remark-gfm";
 export default function Page() {
-  const allEvents = getSortedPostsData("events", 5);
+  const allEvents = getSortedPostsData("events");
+  const mdxOptions = {
+    remarkPlugins: [remarkGfm],
+  };
   return (
-    <div className="md:container px-6 mt-2">
-        <h1># 活动专栏</h1>
-        <div className="flex flex-col gap-10 porse my-8 md:container md:pr-64 lg:px-4 ">
-            {allEvents.map(({ id, content, title, date, location, time }, idx) => (
-                <div key={idx}>
-                    <Abstarcts
-                    file_name={id}
-                    comp_type={AbstarctType.Event}
-                    title={title}
-                    time={time}
-                    date={date}
-                    location={location}
-                    >
-                    <MDXRemote source={content.length>100?content.slice(0, 100) + '...':content} />
-                    </Abstarcts>
-                </div>
-            ))}
-        </div>
-    </div>
+    <>
+      <h1># 活动专栏</h1>
+      <div className="porse flex flex-col gap-10 my-8 md:pr-64">
+        {allEvents.map(({ id, content, title, date, location, time }, idx) => (
+          <div key={idx}>
+            <Abstarcts
+              file_name={id}
+              comp_type={AbstarctType.Event}
+              title={title}
+              time={time}
+              date={date}
+              location={location}
+            >
+              <MDXRemote
+                source={
+                  content.length > 150 ? content.slice(0, 150) + "..." : content
+                }
+                options={{ mdxOptions }}
+                components={{
+                  p: ({ children }) => {
+                    return <p className="mr-[8%]">{children}</p>;
+                  },
+                }}
+              />
+            </Abstarcts>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }

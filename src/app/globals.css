@@ -3,77 +3,71 @@
 @tailwind utilities;
 /* +------------------------ customized typography ----------------------+ */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a:hover {
-    color: grey;
-}
-
-main {
-    padding-top: 5rem;
+  color: grey;
 }
 
 h1 {
-    @apply font-bold;
-    font-size: 1.9rem;
+  @apply font-bold;
+  font-size: 1.9rem;
 }
 
 h3 {
-    @apply font-bold;
-    font-size: 1.3rem;
+  @apply font-bold;
+  font-size: 1.3rem;
 }
 
 h5 {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .h3-blk {
-    @apply font-bold;
-    font-size: 1.2rem;
+  @apply font-bold;
+  font-size: 1.2rem;
 }
 
 .h5-gray {
-    @apply text-gray-400;
-    font-size: 0.9rem;
+  @apply text-gray-400;
+  font-size: 0.9rem;
 }
 
 /* +------------------------ animation ------------------------+ */
 /* transformation effects for <Service> */
 .service {
-    @apply duration-100;
+  @apply duration-100;
 }
 
 .service:hover {
-    @apply translate-y-[-15px] duration-100 opacity-60 bg-gray-200 rounded-xl;
-    cursor: pointer;    
+  @apply translate-y-[-15px] duration-100 opacity-60 bg-gray-200 rounded-xl;
+  cursor: pointer;
 }
 
 /* bg box effects for <Abstracts> */
 .bg-box-fx {
-    position: relative;
-    
+  position: relative;
 }
 
 .bg-box-fx::after {
-    @apply rounded-lg h-[113%] w-0 duration-200 -left-5 lg:-left-3;
-    position: absolute;
-    content: '';
-    top: -6%;
-    z-index: -1;
-    
+  @apply rounded-lg h-[113%] w-0 duration-200 -left-5 lg:-left-3;
+  position: absolute;
+  content: "";
+  top: -6%;
+  z-index: -1;
 }
 
 .bg-box-fx::after:hover {
-    @apply bg-gray-200 dark:bg-base-200 cursor-pointer w-[112%]  lg:w-full 2xl:w-[89%] duration-300;
+  @apply bg-gray-200 dark:bg-base-200 cursor-pointer w-[112%]  lg:w-full 2xl:w-[89%] duration-300;
 }
 
 /* +------------------------ others ------------------------+ */
 /* for dark mode */
 .dark-adaptor {
-    @apply dark:invert dark:opacity-70;
+  @apply dark:invert dark:opacity-70;
 }
 
 .footer-icon > div {
-    @apply gap-2 flex;
+  @apply gap-2 flex;
 }
