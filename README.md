@@ -2,7 +2,7 @@
 
 [![Deploy Next.js site to Pages](https://github.com/DGUTCA/dca.moe/actions/workflows/nextjs.yml/badge.svg)](https://github.com/DGUTCA/dca.moe/actions/workflows/nextjs.yml)
 
-中文 / [English](readmeEN.md)
+中文 / [English](README_EN.md)
 
 欢迎来到 [dca.moe](https://dca.moe/) 的源码仓库
 
