@@ -2,6 +2,8 @@ import "./globals.css";
 import Nav from "../ui/nav";
 import Footer from "../ui/footer";
 import type { Metadata } from "next";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   title: "东莞理工学院 计算机协会",
@@ -31,7 +33,9 @@ export default function RootLayout({
         <header>
           <Nav />
         </header>
-        <main className="md:container pt-24 px-10 ">{children}</main>
+        <Suspense fallback={<Loading />}>
+          <main className="md:container pt-24 px-10 ">{children}</main>
+        </Suspense>
         <footer>
           <Footer />
         </footer>
