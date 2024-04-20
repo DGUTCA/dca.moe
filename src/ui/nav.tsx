@@ -2,14 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { navs } from "@/lib/config";
 
 export default function Nav() {
   const pathname = usePathname();
-  const navs = [
-    { name: "Home", path: "/" },
-    { name: "Events", path: "/events" },
-    { name: "Blog", path: "/blog" },
-  ];
   function navClass(path: string) {
     if (path === "/") {
       return pathname === path ? "tab tab-active" : "tab";
