@@ -3,14 +3,14 @@ import { ServiceInterface } from "@/ui/service";
 export const services: ServiceInterface[] = [
   {
     img_path: "/icons/fix.svg",
-    title: "单点登录",
-    desc: "协会单点登录系统",
+    title: "DCA SSO",
+    desc: "单点登录",
     href: "https://dca.dgut.edu.cn/auth/realms/dca-realm/account",
   },
   {
     img_path: "/icons/git.svg",
     title: "Git",
-    desc: "Git代码托管服务（WIP）",
+    desc: "Git代码托管（WIP）",
     href: "https://git.dgut.edu.cn/",
   },
   {
