@@ -1,15 +1,15 @@
 export const services = [
   {
     img_path: "/icons/fix.svg",
-    title: "报修平台",
-    desc: "为广大师生同学提供设备维修服务喵（在建中）",
-    href: "#",
+    title: "单点登录",
+    desc: "协会单点登录系统",
+    href: "https://dca.dgut.edu.cn/auth/realms/dca-realm/account",
   },
   {
     img_path: "/icons/git.svg",
     title: "Git",
-    desc: "校内自建git仓库（有意向）",
-    href: "https://github.com/DGUTCA/issues/issues/new/choose",
+    desc: "Git代码托管服务（WIP）",
+    href: "https://git.dgut.edu.cn/",
   },
   {
     img_path: "/icons/mirror.svg",
