@@ -9,7 +9,7 @@ export default function Page() {
     remarkPlugins: [remarkGfm],
   };
   return (
-    <>
+    <div className="lg:pl-10 xl:pl-[80px]">
       <h1># 活动专栏</h1>
       <div className="porse flex flex-col gap-10 my-8 md:pr-64">
         {allEvents.map(({ id, content, title, date, location, time }, idx) => (
@@ -37,6 +37,6 @@ export default function Page() {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
