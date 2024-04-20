@@ -41,7 +41,7 @@ h5 {
 }
 
 .service:hover {
-  @apply translate-y-[-15px] duration-100 opacity-60 bg-gray-200 rounded-xl;
+  @apply translate-y-[-15px] duration-100 opacity-60 bg-gray-200;
   cursor: pointer;
 }
 

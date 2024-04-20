@@ -1,7 +1,8 @@
 interface ServiceInterface {
   img_path: string;
   title: string;
-  desc?: string;
+  desc: string;
+  href: string;
   className?: string;
 }
 

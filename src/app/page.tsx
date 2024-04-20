@@ -11,20 +11,14 @@ export default function Home() {
     <>
       <h1 className="lg:pl-10 xl:pl-[80px]"># 线上服务</h1>
       <div>
-        <div className="grid grid-flow-row grid-cols-2 gap-4 mt-4 lg:mt-12 md:grid-cols-4 md:gap-0">
+        <div className="grid grid-flow-row grid-cols-2 gap-4 mt-4 md:grid-cols-4 lg:mx-24 lg:mt-8 lg:gap-6">
           {services.map((service, idx) => (
-            <a href={service.href} key={idx}>
-              <Service
-                img_path={service.img_path}
-                title={service.title}
-                desc={service.desc}
-              ></Service>
-            </a>
+            <Service key={idx} props={service}></Service>
           ))}
         </div>
       </div>
 
-      <div className="my-16 grid gap-16 lg:pl-10 lg:grid-cols-2 lg:grid-rows-none lg:gap-28 xl:pl-[80px]">
+      <div className="my-8 grid gap-16 lg:pl-10 lg:grid-cols-2 lg:grid-rows-none lg:gap-28 xl:pl-[80px]">
         <div>
           <h1># 最近文章</h1>
           <div className="flex flex-col gap-8 mt-3">
@@ -49,7 +43,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
+        <div className="row-span-2">
           <h1># 最新活动</h1>
           <div className="flex flex-col gap-8 mt-3">
             {allEvents.map(

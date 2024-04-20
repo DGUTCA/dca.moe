@@ -1,4 +1,6 @@
-export const services = [
+import { ServiceInterface } from "@/ui/service";
+
+export const services: ServiceInterface[] = [
   {
     img_path: "/icons/fix.svg",
     title: "单点登录",
