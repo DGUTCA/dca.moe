@@ -29,14 +29,14 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </head>
-      <body>
+      <body className="min-h-screen flex flex-col">
         <header>
           <Nav />
         </header>
         <Suspense fallback={<Loading />}>
-          <main className="md:container pt-24 px-10 ">{children}</main>
+          <main className="md:container pt-24 px-10 flex-grow">{children}</main>
         </Suspense>
-        <footer>
+        <footer className="mt-auto">
           <Footer />
         </footer>
       </body>

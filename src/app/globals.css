@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+/* Ensure the html and body take full height */
+html, body {
+  height: 100%;
+}
+
 a:hover {
   color: grey;
 }
